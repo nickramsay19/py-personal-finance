@@ -17,3 +17,7 @@ gunicorn --certfile=keys/prunus.crt --keyfile=keys/prunus.key --bind 0.0.0.0:80 
 ```
 * Runs server on port 80 (default HTTP port)
 * Runs server with SSL support to listen for HTTPS
+
+## Todo
+### Client
+* Remove layout from login and create an independent page for logging in, ideally in a modal.

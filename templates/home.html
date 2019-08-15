@@ -1,0 +1,93 @@
+{% extends 'layout.html' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome to Prunus HTTP.</h1>
+    <p>
+        Hello {{ email }}, <a href="https://prunus.app">Prunus</a> cloud will be available soon. 
+        <br>In the meantime, use this page to view mockups of <a href="https://prunus.app">Prunus</a> cloud. 
+    </p>
+    <p>
+        Or <a href="{{ url_for('logout') }}">Log out here</a>.
+    </p>
+    <small>Please note that most features are inaccessable as this is a mere visual mockup.</small>
+
+    <br><br><br>
+    <h2>Simple app interface</h2><br>
+    <div class="row">
+        <div class="col-lg">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Prunus Drive</h5>
+                    <p class="card-text">Access your files via Prunus FTP UI.</p>
+                </div>
+                <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Open Prunus Drive</a>
+                    </div>
+            </div>
+        </div>
+        <div class="col-lg">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Prunus Notes</h5>
+                    <p class="card-text">Utilise a minimal note taking interface, inspired by @bearapp.</p>
+                </div>
+                <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Open Prunus Notes</a>
+                    </div>
+            </div>
+        </div>
+        <div class="col-lg">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Prunus GameHub</h5>
+                    <p class="card-text">Play games with other users, online or multiplayer across devices via Prunus Stream.</p>
+                </div>
+                <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Open Prunus GameHub</a>
+                    </div>
+            </div>
+        </div>
+        <div class="col-lg">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Prunus Settings</h5>
+                    <p class="card-text">Access a wide range of controls for all aspects of your online experience.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Open Prunus Settings</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+    <h2>Stream across one or many devices simultaneously</h2><br>
+    <label>Select a device to play music from.</label>
+    <div class="input-group">
+        <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+            <option selected>Laptop</option>
+            <option value="1">Phone</option>
+        </select>
+        <div class="input-group-append">
+            <button class="btn btn-outline-primary" type="button">Play</button>
+        </div>
+    </div>
+
+    <br><br><br>
+    <h2>Built in file management</h2><br>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Notes</a></li>
+            <li class="breadcrumb-item"><a href="#">Projects</a></li>
+            <li class="breadcrumb-item active" aria-current="page">#node-finance-graph</li>
+        </ol>
+    </nav>
+    <div class="card" style="width: 100%;">
+        <div class="card-body">
+            <h5 class="card-title">Node.Js Finance Graphing Tools</h5>
+            <p class="card-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        </div>
+    </div>
+    
+{% endblock %}
