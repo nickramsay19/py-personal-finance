@@ -3,7 +3,7 @@
 
 ## Start server for Development
 ``` bash
-export FLASK_APP=myapp
+export FLASK_APP=prunus
 export FLASK_ENV=development
 flask run
 ```

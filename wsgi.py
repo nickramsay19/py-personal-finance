@@ -1,4 +1,4 @@
-from controller import app
+from prunus import app
 
 if __name__ == "__main__":
     app.run()
