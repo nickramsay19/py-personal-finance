@@ -1,9 +1,9 @@
-# py-gunicorn-flask-prunus
+# py-personal-finance
 > Created by Nicholas Ramsay
 
 ## Start server for Development
 ``` bash
-export FLASK_APP=prunus
+export FLASK_APP=app.py
 export FLASK_ENV=development
 flask run
 ```
@@ -13,10 +13,9 @@ flask run
 
 ## Start server for Production
 ``` bash
-gunicorn --certfile=keys/prunus.crt --keyfile=keys/prunus.key --bind 0.0.0.0:80 wsgi:app
+gunicorn --bind 0.0.0.0:80 wsgi:app
 ```
 * Runs server on port 80 (default HTTP port)
-* Runs server with SSL support to listen for HTTPS
 
 ## Todo
 ### Client

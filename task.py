@@ -42,9 +42,8 @@ class TaskRunner:
 if __name__ == '__main__':
     taskRunner = TaskRunner()
     taskRunner.AddTask('greet','echo hello')
-    taskRunner.AddTask(['dev','development', 'debug'],'export FLASK_APP=prunus && export FLASK_ENV=development && flask run')
-    taskRunner.AddTask(['pro','production'],'gunicorn --certfile=keys/prunus.crt --keyfile=keys/prunus.key --bind 0.0.0.0:80 wsgi:app')
-    taskRunner.AddTask('pro-http','gunicorn --bind 0.0.0.0:80 wsgi:app')
+    taskRunner.AddTask(['dev','development', 'debug'],'export FLASK_APP=app.py && export FLASK_ENV=development && flask run')
+    taskRunner.AddTask(['pro','production'],'gunicorn --bind 0.0.0.0:80 wsgi:app')
 
     taskRunner.RunTask(sys.argv[1])
 

@@ -1,5 +1,9 @@
+body{
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 .container {
-    margin-top: 5em;
+    margin-top: 2.2em;
     margin-bottom: 30%;
 }
 
