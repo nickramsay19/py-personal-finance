@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block title %}Upload{% endblock %}
+
+{% block content %}
+    <h1>Upload a CSV File</h1><br>
+
+    <p>
+        To get help on uploading a CSV file from ANZ visit <a href="https://www.anz.com.au/support/internet-banking/accounts/transactions/download/">Download my Transactions</a>.
+    </p>
+
+    <form>
+        <div class="form-group">
+            <label>Upload an ANZ.csv file.</label>
+            <input type="file" class="form-control-file">
+        </div>
+    </form>
+{% endblock %}

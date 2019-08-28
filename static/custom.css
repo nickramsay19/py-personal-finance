@@ -3,7 +3,7 @@ body{
 }
 
 .container {
-    margin-top: 2.2em;
+    margin-top: 1em;
     margin-bottom: 30%;
 }
 
@@ -17,10 +17,11 @@ body{
     margin-bottom: 0px;
 }
 
-.card{
-    
-}
 .card-footer{
     text-align: center;
     padding: auto;
+}
+
+.jumbo-net-balance{
+    background-color: #22ff22ee !important;
 }

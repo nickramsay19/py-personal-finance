@@ -5,6 +5,34 @@
     <h1>Dashboard</h1><br>
     
     <div class="row">
+        <div class="col-md-8">
+            <div class="jumbotron jumbo-net-balance">
+                <div class="row">
+                    <div class="col text-left">
+                        <h1><i class="fa fa-dollar-sign"></i></h1>
+                    </div>
+                    <div class="col text-right">
+                        <h1>${{current.amount}}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="jumbotron bg-danger jumbo-net-loss">
+                <div class="row">
+                    <div class="col text-left">
+                        <h1><i class="fa fa-shopping-cart"></i></h1>
+                    </div>
+                    <div class="col text-right">
+                            <h1>$467.95</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
         <div class="col-md">
             <div class="card border-light mb-3">
                 <div class="card-header">
@@ -18,7 +46,7 @@
         <div class="col-md">
             <div class="card border-light mb-3">
                 <div class="card-header">
-                    Categorical Spending for {{ datetime.now().strftime("%B") }}
+                    Categorical Spending
                 </div>
                 <div class="card-img-bottom">
                     <canvas id="monthEssentialsVsNonEssentials"></canvas>
@@ -43,9 +71,9 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% for transaction in transactions %}
+                            {% for transaction in transactions[:4] %}
                                 <tr>
-                                    <td>{{ transaction.date.strftime("%d/%m/%y") }}</td>
+                                    <td>{{ transaction.date }}</td>
                                     {% if transaction.amount > 0 %}
                                         <td style="color:forestgreen;">+{{ transaction.amount }}</td>
                                     {% else %}

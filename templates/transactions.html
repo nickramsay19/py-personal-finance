@@ -14,9 +14,22 @@
             </tr>
         </thead>
         <tbody>
+            <!-- Current -->
+            <tr>
+                <td><strong>{{ current.date }}</small></strong></td>
+                {% if current.amount > 0 %}
+                    <td style="color:forestgreen;"><strong>+{{ current.amount }}</strong></td>
+                {% else %}
+                    <td style="color:crimson;"><strong>{{ current.amount }}</strong></td>
+                {% endif %}
+                <td><strong>Most recent total</strong></td>
+                <td></td>
+            </tr>
+
+            
             {% for transaction in transactions %}
                 <tr>
-                    <td>{{ transaction.date.strftime("%d/%m/%y") }}</td>
+                    <td>{{ transaction.date }}</td>
                     {% if transaction.amount > 0 %}
                         <td style="color:forestgreen;">+{{ transaction.amount }}</td>
                     {% else %}
