@@ -8,7 +8,6 @@
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='bootstrap-reboot.min.css')}}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css')}}">
     
-    <!--<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='journal-bootstrap.min.css')}}">-->
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='custom.css')}}">
 
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css')}}">
@@ -35,7 +34,8 @@
                 <a class="nav-link" href="{{url_for('viewUpload')}}"><i class="fa fa-upload"></i>&nbsp;Upload</a>
             </li>
         </ul>
-    </nav>
+    </nav><br><br><br>
+
     <!-- Content -->
     <div class="container">
         {% block content %}{% endblock %}
